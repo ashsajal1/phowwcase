@@ -1,9 +1,10 @@
+@import '../../variables';
+
 .navbar {
     padding: 12px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba($primaryColor, 0.25);
 
     .btn-group {
         display: flex;
-        
     }
 }
