@@ -1,11 +1,11 @@
 import { Flex, Text, Button } from '@radix-ui/themes';
+import Navbar from './components/Navbar';
 export default function App() {
   return (
-    <div>
-      <Flex direction="column" gap="2">
-      <Text>Hello from Radix Themes :)</Text>
-      <Button>Let's go</Button>
-    </Flex>
-    </div>
+    <>
+
+    <Navbar />
+    
+    </>
   )
 }
