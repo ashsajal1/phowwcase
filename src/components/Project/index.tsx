@@ -21,8 +21,8 @@ export default function Project({ title, description, coder, coderImg }: Project
             </Flex>
 
             <Text size={'2'}>{description}</Text>
-            <Flex style={{paddingTop: '2px'}} gap={'2'}>
-                <Text size={'1'}>#javascript</Text>
+            <Flex style={{ paddingTop: '2px' }} gap={'2'}>
+                <Text className='text' size={'1'}>#javascript</Text>
                 <Text size={'1'}>#react</Text>
                 <Text size={'1'}>#tailwindcss</Text>
             </Flex>
@@ -31,7 +31,7 @@ export default function Project({ title, description, coder, coderImg }: Project
                 <Flex gap="3" align="center">
                     <Avatar
                         size="2"
-                        src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
+                        src={coderImg}
                         radius="full"
                         fallback="T"
                     />
