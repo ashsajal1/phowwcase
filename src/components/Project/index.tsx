@@ -1,15 +1,19 @@
 import { Avatar, Box, Card, Text, Flex, Button } from '@radix-ui/themes'
 import './index.scss'
 import { GitHubLogoIcon, OpenInNewWindowIcon, TwitterLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
+import SocialLink from './SocialLink'
 
 interface ProjectProps {
     title: string,
     description: string,
     coder: string,
-    coderImg: string
+    coderImg: string,
+    githubUrl: string,
+    linkedinUrl: string,
+    twitterUrl: string
 }
 
-export default function Project({ title, description, coder, coderImg }: ProjectProps) {
+export default function Project({ title, description, coder, coderImg, githubUrl, linkedinUrl, twitterUrl }: ProjectProps) {
     return (
         <Card className='project-card'>
             <Flex align={'center'} justify={'between'}>
@@ -44,12 +48,8 @@ export default function Project({ title, description, coder, coderImg }: Project
                         </Text>
                     </Box>
                 </Flex>
-
-                <Flex gap={'2'}>
-                    <Button variant='outline'><GitHubLogoIcon /></Button>
-                    <Button variant='outline'><TwitterLogoIcon /></Button>
-                    <Button variant='outline'><LinkedInLogoIcon /></Button>
-                </Flex>
+                
+                <SocialLink githubUrl={githubUrl} linkedinUrl={linkedinUrl} twitterUrl={twitterUrl} />
             </Flex>
         </Card>
     )
