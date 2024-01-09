@@ -90,7 +90,7 @@
         "githubUrl": "https://github.com/emilydavis",
         "twitterUrl": "https://x.com/emilydavis",
         "linkedInUrl": "https://linkedin.com/in/emilydavis",
-        "previewUrl": "https://name.vercel.app",
+        "previewUrl": null,
         "githubRepo": "https://github.com/emilydavis/projectname",
         "role": "Mobile App Developer",
         "projectTitle": "Fitness Tracking App",

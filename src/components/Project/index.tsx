@@ -1,6 +1,6 @@
 import { Avatar, Box, Card, Text, Flex, Button } from '@radix-ui/themes'
 import './index.scss'
-import { GitHubLogoIcon, OpenInNewWindowIcon, TwitterLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
+import { OpenInNewWindowIcon } from '@radix-ui/react-icons'
 import SocialLink from './SocialLink'
 
 interface ProjectProps {
@@ -10,17 +10,25 @@ interface ProjectProps {
     coderImg: string,
     githubUrl: string,
     linkedinUrl: string,
-    twitterUrl: string
+    twitterUrl: string,
+    previewUrl: string | null,
+    githubRepo: string
 }
 
-export default function Project({ title, description, coder, coderImg, githubUrl, linkedinUrl, twitterUrl }: ProjectProps) {
+export default function Project({ title, description, coder, coderImg, githubUrl, linkedinUrl, twitterUrl, previewUrl, githubRepo }: ProjectProps) {
     return (
         <Card className='project-card'>
             <Flex align={'center'} justify={'between'}>
                 <h3>{title}</h3>
                 <Flex gap={'2'}>
-                    <Button variant='soft' size={'1'}><OpenInNewWindowIcon /> Preview</Button>
-                    <Button size={'1'}>Github repo</Button>
+                    {previewUrl && (
+                        <a target='_blink' href={previewUrl}>
+                            <Button variant='soft' size={'1'}><OpenInNewWindowIcon /> Preview</Button>
+                        </a>
+                    )}
+                    <a target='_blink' href={githubRepo}>
+                        <Button size={'1'}>Github repo</Button>
+                    </a>
                 </Flex>
             </Flex>
 
@@ -48,7 +56,7 @@ export default function Project({ title, description, coder, coderImg, githubUrl
                         </Text>
                     </Box>
                 </Flex>
-                
+
                 <SocialLink githubUrl={githubUrl} linkedinUrl={linkedinUrl} twitterUrl={twitterUrl} />
             </Flex>
         </Card>

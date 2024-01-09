@@ -15,7 +15,7 @@ export default function App() {
 
       <Grid style={{ padding: '4px' }} columns={{ xs: '1', sm: '2', md: '3' }} align={'start'} gap={'3'}>
         {projects.map(project => (
-          <Project title={project.projectTitle} description={project.projectDescription} coder={project.coderName} coderImg={project.coderImage} githubUrl={project.githubUrl} twitterUrl={project.twitterUrl} linkedinUrl={project.linkedInUrl} />
+          <Project title={project.projectTitle} description={project.projectDescription} coder={project.coderName} coderImg={project.coderImage} githubUrl={project.githubUrl} twitterUrl={project.twitterUrl} linkedinUrl={project.linkedInUrl} githubRepo={project.githubRepo} previewUrl={project.previewUrl} />
         ))}
 
       </Grid>
