@@ -1,0 +1,104 @@
+[
+    {
+        "coderName": "John Doe",
+        "coderImage": "https://api.github.com/johndoe.png",
+        "githubUrl": "https://github.com/johndoe",
+        "twitterUrl": "https://x.com/johndoe",
+        "linkedInUrl": "https://linkedin.com/in/johndoe",
+        "previewUrl": "https://name.vercel.app",
+        "githubRepo": "https://github.com/johndoe/projectname",
+        "role": "Frontend Developer",
+        "projectTitle": "Todo app",
+        "technologies": [
+            "React",
+            "Tailwind",
+            "Typescript"
+        ],
+        "projectDescription": "User can create, edit and delete TODO with this web app."
+    },
+    {
+        "coderName": "Jane Smith",
+        "coderImage": "https://api.github.com/janesmith.png",
+        "githubUrl": "https://github.com/janesmith",
+        "twitterUrl": "https://x.com/janesmith",
+        "linkedInUrl": "https://linkedin.com/in/janesmith",
+        "previewUrl": "https://name.vercel.app",
+        "githubRepo": "https://github.com/janesmith/projectname",
+        "role": "Backend Developer",
+        "projectTitle": "E-commerce API",
+        "technologies": [
+            "Node.js",
+            "Express",
+            "MongoDB"
+        ],
+        "projectDescription": "API for managing products, orders, and user authentication in an e-commerce platform."
+    },
+    {
+        "coderName": "David Johnson",
+        "coderImage": "https://api.github.com/davidjohnson.png",
+        "githubUrl": "https://github.com/davidjohnson",
+        "twitterUrl": "https://x.com/davidjohnson",
+        "linkedInUrl": "https://linkedin.com/in/davidjohnson",
+        "previewUrl": "https://name.vercel.app",
+        "githubRepo": "https://github.com/davidjohnson/projectname",
+        "role": "Full Stack Developer",
+        "projectTitle": "Social Media App",
+        "technologies": [
+            "React",
+            "Node.js",
+            "MongoDB"
+        ],
+        "projectDescription": "A social media platform with features like posting, commenting, and user profiles."
+    },
+    {
+        "coderName": "Sarah Williams",
+        "coderImage": "https://api.github.com/sarahwilliams.png",
+        "githubUrl": "https://github.com/sarahwilliams",
+        "twitterUrl": "https://x.com/sarahwilliams",
+        "linkedInUrl": "https://linkedin.com/in/sarahwilliams",
+        "previewUrl": "https://name.vercel.app",
+        "githubRepo": "https://github.com/sarahwilliams/projectname",
+        "role": "UI/UX Designer",
+        "projectTitle": "Travel Booking Website",
+        "technologies": [
+            "Figma",
+            "Adobe XD",
+            "Sketch"
+        ],
+        "projectDescription": "A responsive and visually appealing website for booking travel accommodations."
+    },
+    {
+        "coderName": "Michael Brown",
+        "coderImage": "https://api.github.com/michaelbrown.png",
+        "githubUrl": "https://github.com/michaelbrown",
+        "twitterUrl": "https://x.com/michaelbrown",
+        "linkedInUrl": "https://linkedin.com/in/michaelbrown",
+        "previewUrl": "https://name.vercel.app",
+        "githubRepo": "https://github.com/michaelbrown/projectname",
+        "role": "Data Scientist",
+        "projectTitle": "Machine Learning Model",
+        "technologies": [
+            "Python",
+            "TensorFlow",
+            "Scikit-learn"
+        ],
+        "projectDescription": "A machine learning model for predicting customer churn in a subscription-based service."
+    },
+    {
+        "coderName": "Emily Davis",
+        "coderImage": "https://api.github.com/emilydavis.png",
+        "githubUrl": "https://github.com/emilydavis",
+        "twitterUrl": "https://x.com/emilydavis",
+        "linkedInUrl": "https://linkedin.com/in/emilydavis",
+        "previewUrl": "https://name.vercel.app",
+        "githubRepo": "https://github.com/emilydavis/projectname",
+        "role": "Mobile App Developer",
+        "projectTitle": "Fitness Tracking App",
+        "technologies": [
+            "Flutter",
+            "Firebase",
+            "Dart"
+        ],
+        "projectDescription": "An app that tracks and records fitness activities, including workouts and calorie intake."
+    }
+]
