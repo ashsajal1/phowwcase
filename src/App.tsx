@@ -1,4 +1,4 @@
-import { Flex, Text, Button, Grid, Separator } from '@radix-ui/themes';
+import { Grid, Separator } from '@radix-ui/themes';
 import Navbar from './components/Navbar';
 import Project from './components/Project';
 import Menu from './components/Menu';
