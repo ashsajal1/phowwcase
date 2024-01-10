@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Project from './components/Project';
 import Menu from './components/Menu';
 import './App.scss'
-import projects from '../public/data/projects.json'
+import projects from './data/projects.json'
 
 export default function App() {
   return (
