@@ -5,13 +5,23 @@ import Menu from './components/Menu';
 import './App.scss'
 import data from './data/projects.json'
 import { useEffect, useState } from 'react';
+import { useSearchContext } from './hooks/userSearch';
 
 export default function App() {
   const [projects, setProjects] = useState<any>(null);
+  const { searchTerm } = useSearchContext()
 
   useEffect(() => {
-    setProjects(data)
-  }, [projects])
+    const searchedItems = () => {
+      const filteredProjects = data.filter(project =>
+        project.role.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        project.projectDescription.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        project.projectTitle.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setProjects(filteredProjects);
+    }
+    searchedItems();
+  }, [searchTerm])
 
   return (
     <>
