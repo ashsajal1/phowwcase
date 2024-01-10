@@ -6,9 +6,11 @@ export default function Menu() {
     <Flex style={{ padding: "6px", }} align={'center'} gap={'2'} justify={'between'}>
       <Flex gap={'1'}>
         <Button variant="outline"><MixerHorizontalIcon /> Filter </Button>
-        <Button variant="soft">Javascript </Button>
-        <Button variant="soft">React </Button>
-        <Button variant="soft">Vue </Button>
+        <Flex display={{ xs: "none", sm: 'flex' }} gap={'1'} align={'center'}>
+          <Button variant="soft">Javascript </Button>
+          <Button variant="soft">React </Button>
+          <Button variant="soft">Vue </Button>
+        </Flex>
       </Flex>
       <Flex gap={'2'}>
         <TextFieldInput />
