@@ -1,15 +1,16 @@
 import { MagnifyingGlassIcon, MixerHorizontalIcon } from "@radix-ui/react-icons";
 import { Button, Flex, TextFieldInput } from "@radix-ui/themes";
 import React from "react";
+import { useSearchContext } from "../../hooks/userSearch";
 
 export default function Menu() {
 
+  const { searchTerm, setSearchTerm, handleSearch } = useSearchContext();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value)
+    setSearchTerm(e.target.value)
   }
-  const handleSearch = () => {
-    console.log("Clicked")
-  }
+
   return (
     <Flex style={{ padding: "6px", }} align={'center'} gap={'2'} justify={'between'}>
       <Flex gap={'1'}>
@@ -21,7 +22,7 @@ export default function Menu() {
         </Flex>
       </Flex>
       <Flex gap={'2'}>
-        <TextFieldInput onChange={handleChange} />
+        <TextFieldInput value={searchTerm} onChange={handleChange} />
         <Button onClick={handleSearch}><MagnifyingGlassIcon /> Search</Button>
       </Flex>
     </Flex>
