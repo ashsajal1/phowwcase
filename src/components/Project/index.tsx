@@ -1,6 +1,6 @@
 import { Avatar, Box, Card, Text, Flex, Button } from '@radix-ui/themes'
 import './index.scss'
-import { OpenInNewWindowIcon } from '@radix-ui/react-icons'
+import { OpenInNewWindowIcon,DownloadIcon } from '@radix-ui/react-icons'
 import SocialLink from './SocialLink'
 import { useRef } from 'react'
 import { toPng } from 'html-to-image';
@@ -40,7 +40,7 @@ export default function Project({ title, description, coder, coderImg, githubUrl
             <Flex align={'center'} justify={'between'}>
                 <h3>{title}</h3>
                 <Flex gap={'2'}>
-                    <Button onClick={handleDownload} variant='soft' size={'1'}>dl</Button>
+                    <Button onClick={handleDownload} variant='soft' size={'1'}><DownloadIcon /></Button>
                     {previewUrl && (
                         <a target='_blink' href={previewUrl}>
                             <Button variant='soft' size={'1'}><OpenInNewWindowIcon /> Preview</Button>
