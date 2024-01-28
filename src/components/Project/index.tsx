@@ -3,6 +3,7 @@ import './index.scss'
 import { OpenInNewWindowIcon } from '@radix-ui/react-icons'
 import SocialLink from './SocialLink'
 import { useRef } from 'react'
+import { toPng } from 'html-to-image';
 
 interface ProjectProps {
     title: string,
@@ -18,11 +19,28 @@ interface ProjectProps {
 
 export default function Project({ title, description, coder, coderImg, githubUrl, linkedinUrl, twitterUrl, previewUrl, githubRepo }: ProjectProps) {
     const cardRef = useRef(null);
+
+    const handleDownload = () => {
+        if (cardRef.current) {
+            toPng(cardRef.current)
+                .then(function (dataUrl) {
+                    const link = document.createElement('a');
+                    link.href = dataUrl;
+                    link.download = 'project-card.png';
+                    link.click();
+                })
+                .catch(function (error) {
+                    console.error('Error capturing element:', error);
+                });
+        }
+    };
+
     return (
         <Card ref={cardRef} className='project-card'>
             <Flex align={'center'} justify={'between'}>
                 <h3>{title}</h3>
                 <Flex gap={'2'}>
+                    <Button onClick={handleDownload} variant='soft' size={'1'}>dl</Button>
                     {previewUrl && (
                         <a target='_blink' href={previewUrl}>
                             <Button variant='soft' size={'1'}><OpenInNewWindowIcon /> Preview</Button>
@@ -37,8 +55,8 @@ export default function Project({ title, description, coder, coderImg, githubUrl
             <Text size={'2'}>{description}</Text>
             <Flex style={{ paddingTop: '2px' }} gap={'2'}>
                 <Text className='text' size={'1'}>#javascript</Text>
-                <Text size={'1'}>#react</Text>
-                <Text size={'1'}>#tailwindcss</Text>
+                <Text className='text' size={'1'}>#react</Text>
+                <Text className='text' size={'1'}>#tailwindcss</Text>
             </Flex>
 
             <Flex gap="3" align="center" justify={'between'}>
