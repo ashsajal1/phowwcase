@@ -26,7 +26,7 @@ export default function Project({ title, description, coder, coderImg, githubUrl
                 .then(function (dataUrl) {
                     const link = document.createElement('a');
                     link.href = dataUrl;
-                    link.download = 'project-card.png';
+                    link.download = `${title}.png`;
                     link.click();
                 })
                 .catch(function (error) {
