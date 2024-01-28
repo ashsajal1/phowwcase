@@ -2,6 +2,7 @@ import { Avatar, Box, Card, Text, Flex, Button } from '@radix-ui/themes'
 import './index.scss'
 import { OpenInNewWindowIcon } from '@radix-ui/react-icons'
 import SocialLink from './SocialLink'
+import { useRef } from 'react'
 
 interface ProjectProps {
     title: string,
@@ -16,8 +17,9 @@ interface ProjectProps {
 }
 
 export default function Project({ title, description, coder, coderImg, githubUrl, linkedinUrl, twitterUrl, previewUrl, githubRepo }: ProjectProps) {
+    const cardRef = useRef(null);
     return (
-        <Card className='project-card'>
+        <Card ref={cardRef} className='project-card'>
             <Flex align={'center'} justify={'between'}>
                 <h3>{title}</h3>
                 <Flex gap={'2'}>
